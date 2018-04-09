@@ -56,7 +56,6 @@ public class GameListActivity extends AppCompatActivity {
         adapter=new GameListAdapter(this,R.layout.custom_item_review,list);
         gridView.setAdapter(adapter);
 
-        txtName = (TextView)findViewById(R.id.item_txt);
 
         showDetailReview();
 

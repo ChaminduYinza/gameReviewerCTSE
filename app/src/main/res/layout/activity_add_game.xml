@@ -97,15 +97,9 @@
                 android:layout_gravity="right"
                 android:layout_marginRight="40dp"
                 android:layout_marginTop="40dp"
+                android:textColor="@color/cardview_light_background"
                 android:background="@color/colorPrimary"
                 android:text="Upload" />
-
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="Image" />
 
             <ImageView
                 android:id="@+id/upload_image"
@@ -152,6 +146,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
+                android:theme="@style/RatingBar"
                 android:layout_marginTop="20dp"
                 android:max="5"
                 android:scaleX=".6"
