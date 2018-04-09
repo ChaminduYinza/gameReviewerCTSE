@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_add_review"
+            android:icon="@android:drawable/ic_menu_add"
+            android:title="Add Review" />
+        <item
+            android:id="@+id/nav_race"
+            android:icon="?android:attr/listChoiceIndicatorMultiple"
+            android:title="Race" />
+
+        <item
+            android:id="@+id/nav_rpg"
+            android:icon="?android:attr/listChoiceIndicatorMultiple"
+            android:title="Rpg" />
+        <item
+            android:id="@+id/nav_action"
+            android:icon="?android:attr/listChoiceIndicatorMultiple"
+            android:title="Action" />
+        <item
+            android:id="@+id/nav_adeventure"
+            android:icon="?android:attr/listChoiceIndicatorMultiple"
+            android:title="Adenture" />
+        <item
+            android:id="@+id/nav_sports"
+            android:icon="?android:attr/listChoiceIndicatorMultiple"
+            android:title="Sports" />
+        <item
+            android:id="@+id/nav_moba"
+            android:icon="?android:attr/listChoiceIndicatorMultiple"
+            android:title="Moba" />
+    </group>
+
+</menu>

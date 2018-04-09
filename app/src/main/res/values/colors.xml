@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#262938</color>
+    <color name="colorPrimaryDark">#181a24</color>
+    <color name="colorAccent">#ff4081</color>
+    <color name="colorText">#8c5ca4</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorTransparentWhite">#CCCCCC</color>
+    <color name="GreyColor">#CCCCCC</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="black">#141414</color>
+    <color name="card">#1b1b1b</color>
+    <color name="menu">#e51d29</color>
+    <color name="reviewBox">#1d1c1c</color>
+    <color name="gold">#ceb605</color>
+
+    <color name="primary">#f44336</color>
+    <color name="primary_dark">#d32f2f</color>
+    <color name="primary_light">#FFCDD2</color>
+    <color name="accent">#7C4DFF</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="transparent">#000000</color>
+
+</resources>

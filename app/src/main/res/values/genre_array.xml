@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="genre_prompt">Choose a Genre</string>
+    <string-array name="spinnerItems">
+        <item>Action</item>
+        <item>Adventure</item>
+        <item>Rpg</item>
+        <item>Moba</item>
+        <item>Sports</item>
+        <item>Race</item>
+       </string-array>
+</resources>
