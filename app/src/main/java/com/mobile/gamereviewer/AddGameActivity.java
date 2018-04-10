@@ -1,4 +1,5 @@
 package com.mobile.gamereviewer;
+
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -19,6 +20,7 @@ import android.widget.RatingBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -34,7 +36,7 @@ public class AddGameActivity extends AppCompatActivity {
     Button btnUpload;
     TextView userName;
     ImageView btnBack;
-    private Toolbar toolbar;
+    Toolbar toolbar;
 
 
     final int REQUEST_CODE_GALLERY = 999;
@@ -64,10 +66,13 @@ public class AddGameActivity extends AppCompatActivity {
         btnUpload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ActivityCompat.requestPermissions(AddGameActivity.this,  new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},REQUEST_CODE_GALLERY
+                ActivityCompat.requestPermissions(AddGameActivity.this,
+                        new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+                        REQUEST_CODE_GALLERY
                 );
             }
         });
+
 
         //Toolbar Navigation -> Back
         btnBack.setOnClickListener(new View.OnClickListener() {
@@ -77,10 +82,7 @@ public class AddGameActivity extends AppCompatActivity {
                 onSupportNavigateUp();
             }
         });
-
-
         addGameReview();
-
     }
 
     // Navigate back to home page
@@ -110,6 +112,7 @@ public class AddGameActivity extends AppCompatActivity {
             return;
         }
     }
+
     //Display selected image in ui
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -130,8 +133,9 @@ public class AddGameActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
-
     }
+
+
     // add gameName review data to sqlite game_review and gameName tables
     public void addGameReview() {
 
@@ -147,18 +151,20 @@ public class AddGameActivity extends AppCompatActivity {
                         return;
                     }
 
-                    if (db.insertGame(gameName.getText().toString(), spinnerGenre.getSelectedItem().toString(), imageViewToByte(gameImage))) {
+                    if (db.insertGame(gameName.getText().toString(),spinnerGenre.getSelectedItem().toString(), imageViewToByte(gameImage)) &&
+                            db.insertGameReview(gameName.getText().toString(),(int)
+                                    (Math.round(gameRating.getRating())),userName.getText().toString(),
+                                    reviewDesc.getText().toString())) {
 
-                        db.insertGameReview(gameName.getText().toString(), (int) (Math.round(gameRating.getRating())), userName.getText().toString(), reviewDesc.getText().toString());
 
-                        Toast.makeText(AddGameActivity.this, "Game review Successfully Saved", Toast.LENGTH_LONG).show();
-
-                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        Toast.makeText(AddGameActivity.this, "Successfully Saved", Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(AddGameActivity.this, DetailActivity.class);
+                        intent.putExtra("game_name", gameName.getText().toString());
                         startActivity(intent);
 
                     } else {
 
-                        Toast.makeText(AddGameActivity.this, "Game review Can not be saved, Try again", Toast.LENGTH_LONG).show();
+                        Toast.makeText(AddGameActivity.this, "An exception occurred during the process, Try again", Toast.LENGTH_LONG).show();
                     }
 
                 } catch (Exception e) {
@@ -171,6 +177,8 @@ public class AddGameActivity extends AppCompatActivity {
 
 
     }
+
+
     // convert select image into byte array
     protected byte[] imageViewToByte(ImageView image) {
 

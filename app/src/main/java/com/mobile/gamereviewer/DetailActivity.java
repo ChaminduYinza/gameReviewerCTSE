@@ -25,7 +25,6 @@ import java.util.ArrayList;
 public class DetailActivity extends AppCompatActivity {
 
     Button addComment;
-    Context context;
     TextView gameName;
     ImageView mainImg;
     DatabaseHelper db;
@@ -34,7 +33,6 @@ public class DetailActivity extends AppCompatActivity {
     ListView listView;
     TextView gName;
     private Toolbar toolbar;
-
     EditText dialogName;
     EditText dialogComment;
     RatingBar gameRating;
@@ -140,13 +138,16 @@ public class DetailActivity extends AppCompatActivity {
 
                         if (db.insertGameReview(gName.getText().toString(), (int)(Math.round(gameRating.getRating())), dialogName.getText().toString(), dialogComment.getText().toString())) {
 
+
                             Toast.makeText(DetailActivity.this, "Game review Successfully Saved", Toast.LENGTH_LONG).show();
-                            loadGameReviewList(gName.getText().toString());
+
+
                         } else {
 
                             Toast.makeText(DetailActivity.this, "Error occurred while saving", Toast.LENGTH_LONG).show();
                         }
                         dialog.dismiss();
+                        loadGameReviewList(gName.getText().toString());
 
                     }
                 });

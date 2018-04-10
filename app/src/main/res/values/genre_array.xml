@@ -4,7 +4,7 @@
     <string-array name="spinnerItems">
         <item>Action</item>
         <item>Adventure</item>
-        <item>Rpg</item>
+        <item>RPG</item>
         <item>Moba</item>
         <item>Sports</item>
         <item>Race</item>

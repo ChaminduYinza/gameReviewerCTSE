@@ -16,5 +16,11 @@
     <string name="next_button">NEXT</string>
     <string name="user_name">Username</string>
     <string name="game_name">Game Name</string>
+    <string name="choose_game_genre">Choose Game Genre</string>
+    <string name="upload">Upload</string>
+    <string name="game_review">Game Review</string>
+    <string name="save">Save</string>
+    <string name="review">Review	 : </string>
+    <string name="user_name_review">Username : </string>
 
 </resources>

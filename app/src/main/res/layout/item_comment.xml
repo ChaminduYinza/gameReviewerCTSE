@@ -14,60 +14,29 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="74dp"
+            android:layout_height="89dp"
             android:layout_alignParentBottom="true"
             android:paddingBottom="5dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:paddingTop="10dp">
 
-            <!--<TextView-->
-            <!--android:id="@+id/username"-->
-            <!--android:layout_width="100dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_alignParentTop="true"-->
-            <!--android:paddingTop="10dp"-->
-            <!--android:text="Username : "-->
-            <!--android:textColor="#FFFFFF" />-->
-
-
-            <!--<TextView-->
-            <!--android:id="@+id/added_user"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_centerVertical="true"-->
-            <!--android:paddingTop="10dp"-->
-            <!--android:text="UserName"-->
-            <!--android:textColor="#FFFFFF" />-->
-            <!---->
-
-            <!--<TextView-->
-            <!--android:id="@+id/comment"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_below="@+id/username"-->
-            <!--android:layout_centerVertical="true"-->
-            <!--android:paddingTop="10dp"-->
-            <!--android:text="Comment"-->
-            <!--android:textColor="#FFFFFF" />-->
 
             <TextView
                 android:id="@+id/textView13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:text="Username :"
+                android:layout_below="@+id/MyRating"
+                android:text="@string/user_name_review"
                 android:textColor="@color/cardview_light_background" />
 
             <TextView
                 android:id="@+id/added_user"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toEndOf="@+id/textView13"
-                android:layout_toRightOf="@+id/textView13"
+                android:layout_above="@+id/comment"
+                android:layout_alignStart="@+id/comment"
                 android:text="TextView"
                 android:textColor="@color/cardview_light_background" />
 
@@ -75,11 +44,10 @@
                 android:id="@+id/textView15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
+                android:layout_alignBaseline="@+id/comment"
+                android:layout_alignBottom="@+id/comment"
                 android:layout_alignParentStart="true"
-                android:layout_below="@+id/textView13"
-                android:layout_marginTop="5dp"
-                android:text="Comment :"
+                android:text="@string/review"
                 android:textColor="@color/cardview_light_background" />
 
             <TextView
@@ -100,7 +68,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
-                android:layout_below="@+id/textView15"
+                android:layout_alignParentTop="true"
                 android:isIndicator="true"
                 android:numStars="5"
                 android:stepSize="0.1"

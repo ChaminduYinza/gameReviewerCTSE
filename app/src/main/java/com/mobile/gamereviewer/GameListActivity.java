@@ -26,14 +26,8 @@ public class GameListActivity extends AppCompatActivity {
     ArrayList<GameModel>list;
     GameListAdapter adapter=null;
     DatabaseHelper db;
-    CardView cardView;
-    TextView txtName;
-
-    private DrawerLayout mDrawer;
     private Toolbar toolbar;
-    private NavigationView nvDrawer;
 
-    private ActionBarDrawerToggle drawerToggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

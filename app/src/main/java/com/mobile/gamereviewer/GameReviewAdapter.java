@@ -15,10 +15,6 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-/**
- * Created by Yinza on 3/31/2018.
- */
-
 public class GameReviewAdapter extends BaseAdapter {
 
     Context context;
